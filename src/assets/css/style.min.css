@@ -2377,7 +2377,7 @@ button {
 .shape-img::after {
     width: 100%;
     height: 100%;
-    background: url(images/shape-img/01.png);
+    background: url(/images/shape-img/01.png);
     z-index: -1;
     background-position: center;
     background-repeat: no-repeat
@@ -4556,7 +4556,7 @@ button {
 }
 
 .banner-section {
-    background-image: url(../images/bg-img/01.jpg);
+    background-image: url(..//images/bg-img/01.jpg);
     background-size: cover;
     padding-top: 170px
 }
@@ -4882,7 +4882,7 @@ button {
 }
 
 .banner-section.style-2 {
-    background-image: url(../images/bg-img/02.jpg);
+    background-image: url(..//images/bg-img/02.jpg);
     padding-top: 175px
 }
 
@@ -4915,7 +4915,7 @@ button {
 }
 
 .banner-section.style-3 {
-    background-image: url(../images/bg-img/03.jpg);
+    background-image: url(..//images/bg-img/03.jpg);
     background-position: left;
     padding: 170px 0;
     margin-top: 98px
@@ -4934,7 +4934,7 @@ button {
 }
 
 .banner-section.style-4 {
-    background-image: url(images/bg-img/06.jpg);
+    background-image: url(/images/bg-img/06.jpg);
     z-index: 1;
     padding-bottom: 100px
 }
@@ -5048,7 +5048,7 @@ button {
 }
 
 .banner-section.style-5 {
-    background-image: url(../images/bg-img/08.jpg);
+    background-image: url(..//images/bg-img/08.jpg);
     background-position: center;
     background-attachment: fixed;
     padding: 260px 0 200px
@@ -5107,7 +5107,7 @@ button {
 }
 
 .banner-section.style-6 {
-    background-image: url(../images/bg-img/09.jpg);
+    background-image: url(..//images/bg-img/09.jpg);
     background-position: center;
     background-attachment: fixed;
     padding: 286px 0 200px
@@ -5130,7 +5130,7 @@ button {
 }
 
 .banner-section.style-7 {
-    background-image: url(../images/bg-img/14.jpg);
+    background-image: url(..//images/bg-img/14.jpg);
     background-size: cover;
     background-position: right;
     margin-top: 98px
@@ -5177,7 +5177,7 @@ button {
 
 .pageheader-section {
     padding: 250px 0 100px;
-    background-image: url(../images/pageheader/bg/01.jpg);
+    background-image: url(..//images/pageheader/bg/01.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat
@@ -5189,7 +5189,7 @@ button {
 
 .pageheader-section.style-2 {
     padding-top: 250px;
-    background-image: url(../images/pageheader/bg/02.jpg)
+    background-image: url(..//images/pageheader/bg/02.jpg)
 }
 
 @media(max-width: 991px) {
@@ -5286,7 +5286,7 @@ button {
 }
 
 .category-section.style-2 .section-wrapper .col .category-item .category-inner {
-    background: url(images/category/bg/01.jpg) no-repeat;
+    background: url(/images/category/bg/01.jpg) no-repeat;
     background-size: cover !important
 }
 
@@ -5301,31 +5301,31 @@ button {
 }
 
 .category-section.style-2 .section-wrapper .col:nth-of-type(8n + 2) .category-item .category-inner {
-    background: url(images/category/bg/02.jpg) no-repeat
+    background: url(/images/category/bg/02.jpg) no-repeat
 }
 
 .category-section.style-2 .section-wrapper .col:nth-of-type(8n + 3) .category-item .category-inner {
-    background: url(images/category/bg/03.jpg) no-repeat
+    background: url(/images/category/bg/03.jpg) no-repeat
 }
 
 .category-section.style-2 .section-wrapper .col:nth-of-type(8n + 4) .category-item .category-inner {
-    background: url(images/category/bg/04.jpg) no-repeat
+    background: url(/images/category/bg/04.jpg) no-repeat
 }
 
 .category-section.style-2 .section-wrapper .col:nth-of-type(8n + 5) .category-item .category-inner {
-    background: url(images/category/bg/05.jpg) no-repeat
+    background: url(/images/category/bg/05.jpg) no-repeat
 }
 
 .category-section.style-2 .section-wrapper .col:nth-of-type(8n + 6) .category-item .category-inner {
-    background: url(images/category/bg/06.jpg) no-repeat
+    background: url(/images/category/bg/06.jpg) no-repeat
 }
 
 .category-section.style-2 .section-wrapper .col:nth-of-type(8n + 7) .category-item .category-inner {
-    background: url(images/category/bg/07.jpg) no-repeat
+    background: url(/images/category/bg/07.jpg) no-repeat
 }
 
 .category-section.style-2 .section-wrapper .col:nth-of-type(8n + 8) .category-item .category-inner {
-    background: url(images/category/bg/08.jpg) no-repeat
+    background: url(/images/category/bg/08.jpg) no-repeat
 }
 
 @media(min-width: 992px) {
@@ -5424,7 +5424,7 @@ button {
 }
 
 .course-section.style-3 {
-    background: url(images/shape-img/01.jpg) no-repeat;
+    background: url(/images/shape-img/01.jpg) no-repeat;
     background-position: center;
     background-size: cover
 }
@@ -5541,7 +5541,7 @@ button {
 }
 
 .video-section {
-    background: url(images/bg-img/10.jpg) no-repeat;
+    background: url(/images/bg-img/10.jpg) no-repeat;
     background-position: center;
     background-size: cover
 }
@@ -5771,7 +5771,7 @@ button {
 }
 
 .contact-info-section {
-    background: url(images/bg-img/11.jpg) no-repeat;
+    background: url(/images/bg-img/11.jpg) no-repeat;
     background-position: center;
     background-size: cover
 }
@@ -5875,7 +5875,7 @@ button {
 }
 
 .offer-section {
-    background: url(images/bg-img/12.jpg) no-repeat;
+    background: url(/images/bg-img/12.jpg) no-repeat;
     background-position: center;
     background-size: cover
 }
@@ -6279,7 +6279,7 @@ button {
 .event-section::after {
     top: 0;
     left: 0;
-    background: url(images/shape-img/08.png) no-repeat;
+    background: url(/images/shape-img/08.png) no-repeat;
     background-position: center;
     background-size: 115% 30%
 }
@@ -6332,7 +6332,7 @@ button {
 }
 
 .workshop-section {
-    background-image: url(../images/bg-img/04.jpg);
+    background-image: url(..//images/bg-img/04.jpg);
     background-size: cover;
     background-position: center
 }
@@ -6409,7 +6409,7 @@ button {
 .newsletters-section::after {
     bottom: 0;
     left: 0;
-    background: url(images/shape-img/06.png) no-repeat;
+    background: url(/images/shape-img/06.png) no-repeat;
     background-position: center;
     background-size: cover
 }
@@ -6498,7 +6498,7 @@ button {
 }
 
 .newsletters-section.style-2 {
-    background-image: url(../images/bg-img/13.jpg);
+    background-image: url(..//images/bg-img/13.jpg);
     background-size: cover;
     background-position: center
 }
@@ -6537,7 +6537,7 @@ button {
 .feature-section::after {
     bottom: 0;
     left: 0;
-    background: url(images/shape-img/07.png) no-repeat;
+    background: url(/images/shape-img/07.png) no-repeat;
     background-position: center;
     background-size: cover
 }
@@ -6659,7 +6659,7 @@ button {
 }
 
 .clients-section {
-    background: url(images/bg-img/05.jpg) no-repeat;
+    background: url(/images/bg-img/05.jpg) no-repeat;
     background-position: center;
     background-size: cover
 }
@@ -6681,7 +6681,7 @@ button {
 
 .clients-section.style-2 .section-wrapper {
     height: 400px;
-    background: url(images/clients/bg.png) no-repeat;
+    background: url(/images/clients/bg.png) no-repeat;
     background-position: center;
     background-size: 75% 100%
 }
@@ -6951,7 +6951,7 @@ button {
 }
 
 .register-section {
-    background: url(images/bg-img/07.jpg) no-repeat;
+    background: url(/images/bg-img/07.jpg) no-repeat;
     background-position: center;
     background-size: cover
 }
@@ -7071,7 +7071,7 @@ button {
     top: 60%;
     width: 85%;
     height: 60%;
-    background-image: url(images/shape-img/10.png);
+    background-image: url(/images/shape-img/10.png);
     background-repeat: no-repeat;
     transform: translateY(-50%);
     background-size: 70%;
@@ -7103,7 +7103,7 @@ button {
 }
 
 .achievement-section {
-    background: url(images/shape-img/02.png) no-repeat;
+    background: url(/images/shape-img/02.png) no-repeat;
     background-position: center
 }
 
@@ -7139,7 +7139,7 @@ button {
 
 @media(min-width: 992px) {
     .achievement-section.style-3 {
-        background: url(images/shape-img/05.png) no-repeat;
+        background: url(/images/shape-img/05.png) no-repeat;
         background-size: 100% 100%;
         background-position: center
     }
