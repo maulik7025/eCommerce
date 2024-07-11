@@ -13,17 +13,17 @@ export const Shop = () => {
 
 
     // Pagination
-    const totalProducts = products.length;
+    const totalProduct = products.length;
     const [currentPage, setCurrentPage] = useState(1);
-    const productPerPage = 12;
-    const indexOfLastProduct = currentPage * productPerPage;
-    const indexOfFirstProduct = indexOfLastProduct - productPerPage;
+    const perPageItems = 12;
+    const indexOfLastProduct = currentPage * perPageItems;
+    const indexOfFirstPrduct = indexOfLastProduct - perPageItems;
 
-    const pageProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+    const perPageProducts = products.slice(indexOfFirstPrduct, indexOfLastProduct);
 
-    // function for page number change
-    const paginate = (pageNumber) => {
-        setCurrentPage(pageNumber)
+
+    const paginate = (number) => {
+        setCurrentPage(number);   
     }
 
   return (
@@ -49,15 +49,15 @@ export const Shop = () => {
 
                             {/* Product listing */}
                             <div>
-                                <ProductCards GridList={GridList} products={products}/>
+                                <ProductCards GridList={GridList} products={perPageProducts}/>
                             </div>
 
                             {/* Pagination */}
 
                             <Pagination 
-                                productPerPage = {productPerPage}
-                                totalProducts = {totalProducts}
+                                totalProduct = {totalProduct}
                                 activePage = {currentPage}
+                                perPageItems = {perPageItems}
                                 paginate = {paginate}
                             />
 

@@ -37,6 +37,11 @@
 .default-pagination .page-item.bg-warnimg {
     background-color: #ffdf40;
 }
+
+.default-pagination li{
+    list-style: none;
+}
+
 @media (max-width: 991px) {
     .header-section.style-4 .header-top {
         background-color: #fff;
