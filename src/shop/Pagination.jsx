@@ -13,7 +13,7 @@ const Pagination = ({totalProduct, activePage, perPageItems, paginate}) => {
     
     <ul className='default-pagination lab-ui'>
         <li>
-            <a href='#' onClick={() => {
+            <a onClick={() => {
                 if(activePage < pageNumbers.length){
                     paginate(activePage - 1)
                 }
@@ -31,7 +31,7 @@ const Pagination = ({totalProduct, activePage, perPageItems, paginate}) => {
         
 
         <li>
-            <a href='#' onClick={() => {
+            <a onClick={() => {
                 if(activePage < pageNumbers.length){
                     paginate(activePage + 1)
                 }
