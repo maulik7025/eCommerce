@@ -4,6 +4,7 @@ import App from './App.jsx'
 import Home from './home/Home.jsx'
 import './index.css'
 import Blog from './blog/Blog.jsx'
+import Shop from './shop/Shop.jsx'
 
 import 'swiper/css';
 
@@ -25,6 +26,7 @@ import {
 
 
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog/>
+      },
+      {
+        path: "/shop",
+        element: <Shop/>
       }
     ]
   },
