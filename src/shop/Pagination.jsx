@@ -1,39 +1,40 @@
 import React from 'react'
 
-const Pagination = ({totalProduct, activePage, perPageItems, paginate}) => {
+const Pagination = ({totalProduct, perPageProduct, currentPage, paginate}) => {
 
-    const pageNumbers = [];
+    const pageNumber = [];
 
-    for (let i=1; i <= Math.ceil(totalProduct / perPageItems); i++){
-        pageNumbers.push(i)
+    for(let i=1; i<= Math.ceil(totalProduct / perPageProduct); i++){
+        pageNumber.push(i)
     }
 
-    console.log(pageNumbers)
   return (
     
     <ul className='default-pagination lab-ui'>
         <li>
             <a onClick={() => {
-                if(activePage < pageNumbers.length){
-                    paginate(activePage - 1)
+                if(currentPage <= pageNumber.length){
+                    paginate(currentPage - 1)
                 }
             }}>
                 <i className="icofont-rounded-left"></i>
             </a>
         </li>
 
-        {pageNumbers.map((number,i) => (
-            <li key={i} className={`page-item ${number === activePage ? "bg-warning" : ""}`}>
-                <button className='bg-transparent' onClick={() => paginate(number)}>{number}</button>
-            </li>
-        ))
+        {
+               pageNumber.map((number, i) => (
+                <li className={`page-item ${number === currentPage ? "bg-warning" : ""}`}>
+                    <button className='bg-transparent' onClick={() => paginate(number)}>{number}</button>
+                </li>
+               ))
         }
+            
         
 
         <li>
             <a onClick={() => {
-                if(activePage < pageNumbers.length){
-                    paginate(activePage + 1)
+                if(currentPage <= pageNumber.length){
+                    paginate(currentPage + 1)
                 }
             }}>
                 <i className="icofont-rounded-right"></i>

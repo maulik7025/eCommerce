@@ -3,6 +3,7 @@ import PageHeader from '../components/PageHeader'
 import Data from "../products.json"
 import { ProductCards } from './ProductCards';
 import Pagination from './Pagination';
+import ProductSearch from './ProductSearch';
 
 const showResult = "Showing 1 - 12 of 139 Results";
 
@@ -14,17 +15,30 @@ export const Shop = () => {
 
     // Pagination
     const totalProduct = products.length;
-    const [currentPage, setCurrentPage] = useState(1);
-    const perPageItems = 12;
-    const indexOfLastProduct = currentPage * perPageItems;
-    const indexOfFirstPrduct = indexOfLastProduct - perPageItems;
+    const [currentPage, setCureentPage] = useState(1);
+    const perPageProduct = 12;
+    const indexOfLastProduct = currentPage * perPageProduct;
+    const indexOfFirstProduct = indexOfLastProduct - perPageProduct;
 
-    const perPageProducts = products.slice(indexOfFirstPrduct, indexOfLastProduct);
-
+    const pageProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
 
     const paginate = (number) => {
-        setCurrentPage(number);   
+        setCureentPage(number);
     }
+
+
+    // Search using Category
+    const [currentCat, setCurrentCat] = useState("All");
+
+    const catList = [...new Set(Data.map((val) => val.category))];
+
+
+    const filterCatProduct = (cat) => {
+        const catWiseProduct = Data.filter((items, i) => items.category === cat)
+        setCurrentCat(cat);
+        setproducts(catWiseProduct);
+    }
+
 
   return (
     <div>   
@@ -49,21 +63,39 @@ export const Shop = () => {
 
                             {/* Product listing */}
                             <div>
-                                <ProductCards GridList={GridList} products={perPageProducts}/>
+                                <ProductCards GridList={GridList} products={pageProducts}/>
                             </div>
 
                             {/* Pagination */}
 
                             <Pagination 
-                                totalProduct = {totalProduct}
-                                activePage = {currentPage}
-                                perPageItems = {perPageItems}
-                                paginate = {paginate}
+                                totalProduct={totalProduct}
+                                perPageProduct={perPageProduct}
+                                currentPage={currentPage}
+                                paginate={paginate}
                             />
 
                         </article>
                     </div>
-                    <div className='col-lg-4 col-12'></div>
+                    <div className='col-lg-4 col-12'>
+                        <ProductSearch products={products} />
+
+                        {/* category wise product search */}
+                        <div className='widget-header'>
+                            <h5 className='ms-2'>All Categories</h5>
+                            <div>
+                                <button className={`m-2 ${currentCat === "All" ? "bg-warning" : ""}`}>All</button>
+                                {
+                                    catList.map((cat,i)=> (
+                                        <button className={`m-2 ${currentCat === cat ? "bg-warning" : ""}`} 
+                                        onClick={() => filterCatProduct(cat)}>{cat}</button>
+                                    ))
+                                  
+                                }
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>

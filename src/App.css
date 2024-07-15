@@ -42,6 +42,13 @@
     list-style: none;
 }
 
+.default-pagination li:hover a i{
+    color: #fff;
+}
+.default-pagination li a{
+    cursor: pointer;
+}
+
 @media (max-width: 991px) {
     .header-section.style-4 .header-top {
         background-color: #fff;
