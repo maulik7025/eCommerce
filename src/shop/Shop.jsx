@@ -84,7 +84,8 @@ export const Shop = () => {
                         <div className='widget-header'>
                             <h5 className='ms-2'>All Categories</h5>
                             <div>
-                                <button className={`m-2 ${currentCat === "All" ? "bg-warning" : ""}`}>All</button>
+                                <button className={`m-2 ${currentCat === "All" ? "bg-warning" : ""}`}
+                                onClick={() => setproducts(Data)}>All</button>
                                 {
                                     catList.map((cat,i)=> (
                                         <button className={`m-2 ${currentCat === cat ? "bg-warning" : ""}`} 
