@@ -4,6 +4,8 @@ import Data from "../products.json"
 import { ProductCards } from './ProductCards';
 import Pagination from './Pagination';
 import ProductSearch from './ProductSearch';
+import PopularPost from './PopularPost';
+import Tags from './Tags';
 
 const showResult = "Showing 1 - 12 of 139 Results";
 
@@ -39,6 +41,11 @@ export const Shop = () => {
         setproducts(catWiseProduct);
     }
 
+    // const allCat = () => {
+    //     setproducts(Data);
+    //     setCurrentCat("All");
+    //     console.log(currentCat)
+    // }
 
   return (
     <div>   
@@ -85,7 +92,7 @@ export const Shop = () => {
                             <h5 className='ms-2'>All Categories</h5>
                             <div>
                                 <button className={`m-2 ${currentCat === "All" ? "bg-warning" : ""}`}
-                                onClick={() => setproducts(Data)}>All</button>
+                                onClick={() => {setproducts(Data); setCurrentCat("All")}}>All</button>
                                 {
                                     catList.map((cat,i)=> (
                                         <button className={`m-2 ${currentCat === cat ? "bg-warning" : ""}`} 
@@ -95,6 +102,12 @@ export const Shop = () => {
                                 }
                             </div>
                         </div>
+
+                        {/* popular Post */}
+                        <PopularPost/>
+
+                        {/* Tags */}
+                        <Tags/>
 
                     </div>
                 </div>
