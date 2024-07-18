@@ -17,11 +17,12 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import '././assets/css/icofont.min.css';
 import '././assets/css/animate.css';
 import '././assets/css/style.min.css';
-
+import SingleProduct from './shop/SingleProduct.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
 
 
 
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop/>
+      },
+      {
+        path: "/shop/:id",
+        element: <SingleProduct/>
       }
     ]
   },

@@ -8,7 +8,6 @@ const ProductSearch = ({products}) => {
     const searchProducts = products.filter((product) => product.name.toLowerCase().includes(searchItems.toLowerCase()))
 
 
-    console.log(searchProducts)
   return (
     <div className='widget widget-search'>
         <form className='search-wrapper mb-3'>

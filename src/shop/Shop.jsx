@@ -41,11 +41,6 @@ export const Shop = () => {
         setproducts(catWiseProduct);
     }
 
-    // const allCat = () => {
-    //     setproducts(Data);
-    //     setCurrentCat("All");
-    //     console.log(currentCat)
-    // }
 
   return (
     <div>   
@@ -95,7 +90,7 @@ export const Shop = () => {
                                 onClick={() => {setproducts(Data); setCurrentCat("All")}}>All</button>
                                 {
                                     catList.map((cat,i)=> (
-                                        <button className={`m-2 ${currentCat === cat ? "bg-warning" : ""}`} 
+                                        <button key={i} className={`m-2 ${currentCat === cat ? "bg-warning" : ""}`} 
                                         onClick={() => filterCatProduct(cat)}>{cat}</button>
                                     ))
                                   

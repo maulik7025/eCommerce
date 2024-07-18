@@ -54,6 +54,26 @@
     object-fit: cover;
 }
 
+.post-content .rating span {
+    margin-left: 8px;
+}
+.select-value i {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+}
+
+.select-value {
+    position: relative;
+}
+
+.select-value select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 30px;
+}
+
 @media (max-width: 991px) {
     .header-section.style-4 .header-top {
         background-color: #fff;
