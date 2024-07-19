@@ -1,12 +1,17 @@
 import React from 'react'
 
-const Pagination = ({totalProduct, perPageProduct, currentPage, paginate}) => {
+const Pagination = ({totalProduct, perPageProduct, setCureentPage, currentPage}) => {
 
     const pageNumber = [];
 
     for(let i=1; i<= Math.ceil(totalProduct / perPageProduct); i++){
         pageNumber.push(i)
     }
+
+    const paginate = (number) => {
+        setCureentPage(number);
+    }
+
 
   return (
     

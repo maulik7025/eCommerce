@@ -45,7 +45,7 @@ const PopularPost = () => {
                   <div className="post-thumb">
                   <Link to={`/blog/${blog.id}`}>
                      <img src={`${blog.imgUrl}`} alt={`${blog.imgAlt}`} />
-                  </Link>
+                  </Link> 
                   </div>
                   <div className="post-content">
                   <Link to={`/blog/${blog.id}`}>

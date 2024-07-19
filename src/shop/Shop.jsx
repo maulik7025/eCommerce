@@ -24,9 +24,6 @@ export const Shop = () => {
 
     const pageProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
 
-    const paginate = (number) => {
-        setCureentPage(number);
-    }
 
 
     // Search using Category
@@ -74,7 +71,7 @@ export const Shop = () => {
                                 totalProduct={totalProduct}
                                 perPageProduct={perPageProduct}
                                 currentPage={currentPage}
-                                paginate={paginate}
+                                setCureentPage={setCureentPage}
                             />
 
                         </article>

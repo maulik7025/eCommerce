@@ -28,10 +28,10 @@ const ProductDisplay = ({item}) => {
         setPreQuantity(preQuantity + 1)
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e) => {    
         e.preventDefault();
         const productDetail = {
-            id: id,
+            id: id, 
             name: name,
             img: img,
             price: price,
