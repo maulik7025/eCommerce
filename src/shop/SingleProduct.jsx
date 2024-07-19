@@ -76,8 +76,7 @@ const SingleProduct = () => {
                         <div className="post-content">
                            <div>
                               {
-                                 result.map((pItem,i) => (
-                                 <ProductDisplay key={pItem.id} item={pItem}/> ))
+                                 result.map((pItem,i) => <ProductDisplay key={pItem.id} item={pItem}/> )
                               }
                            </div>
                         </div>
