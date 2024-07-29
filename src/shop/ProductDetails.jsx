@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
-const ProductDisplay = ({item}) => {
+const ProductDetails = ({item}) => {
 
     
     const {name, id, price, seller, quantity, ratingsCount, img} = item;
@@ -126,4 +126,4 @@ const ProductDisplay = ({item}) => {
     )
 }
 
-export default ProductDisplay
+export default ProductDetails

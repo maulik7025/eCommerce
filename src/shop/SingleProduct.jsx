@@ -10,10 +10,10 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Autoplay, Navigation } from 'swiper/modules';
-import ProductDisplay from "./ProductDisplay";
 import Review from "../components/Review";
 import PopularPost from "./PopularPost";
 import Tags from "./Tags";
+import ProductDetails from "./ProductDetails";
 
 
 const SingleProduct = () => {
@@ -79,7 +79,7 @@ const SingleProduct = () => {
                         <div className="post-content">
                            <div>
                               {
-                                 result.map((pItem,i) => <ProductDisplay key={pItem.id} item={pItem}/> )
+                                 result.map((pItem,i) => <ProductDetails key={pItem.id} item={pItem}/> )
                               }
                            </div>
                         </div>
