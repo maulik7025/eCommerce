@@ -11,6 +11,9 @@ import 'swiper/css/navigation';
 // import required modules
 import { Autoplay, Navigation } from 'swiper/modules';
 import ProductDisplay from "./ProductDisplay";
+import Review from "../components/Review";
+import PopularPost from "./PopularPost";
+import Tags from "./Tags";
 
 
 const SingleProduct = () => {
@@ -83,10 +86,17 @@ const SingleProduct = () => {
                      </div>
                   </div>
                 </div>
-                <div className="review">Review</div>
+                <div className="review">
+                  <Review/>
+                </div>
               </article>
             </div>
-            <div className="col-lg-4 col-12">Right</div>
+            <div className="col-lg-4 col-12">
+               <aside className="ps-lg-4">
+                  <PopularPost/>
+                  <Tags/>
+               </aside>
+            </div>
           </div>
         </div>
       </div>
