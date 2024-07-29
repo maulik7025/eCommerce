@@ -28,11 +28,11 @@ const ProductDisplay = ({item}) => {
         setPreQuantity(preQuantity + 1)
     }
 
-    const handleSubmit = (e) => {        
+    const handleSubmit = (e) => {         
         e.preventDefault();
         const productDetail = {
             id: id, 
-            name: name,
+            name: name, 
             img: img,
             price: price,
             quantity: preQuantity,
@@ -51,7 +51,7 @@ const ProductDisplay = ({item}) => {
       else{
         existingCart.push(productDetail);
       }
-
+ 
     //   Update Local storage
     localStorage.setItem("cart", JSON.stringify(existingCart));
 
