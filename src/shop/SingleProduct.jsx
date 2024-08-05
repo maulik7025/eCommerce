@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-// import Data from "../products.json";
+import Data from "../products.json";
 import PageHeader from "../components/PageHeader";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -17,15 +17,15 @@ import ProductDetails from "./ProductDetails";
 
 
 const SingleProduct = () => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(Data);
 
   const { id } = useParams();
 
-  useEffect(() => {
-   fetch("/src/products.json")
-   .then(res => res.json())
-   .then(data => setProducts(data))
-  },[])
+//   useEffect(() => {
+//    fetch("/src/products.json")
+//    .then(res => res.json())
+//    .then(data => setProducts(data))
+//   },[])
 
   const result = products.filter((p) => p.id === id);
 
