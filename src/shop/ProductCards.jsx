@@ -1,8 +1,12 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import Rating from '../components/Rating'
+import { useDispatch } from 'react-redux'
+import { addItems } from '../utilis/cartSlice';
 
 export const ProductCards = ({GridList, products}) => {
+
+  const dispatch = useDispatch();
+
   return (
     <div className={`shop-product-wrap row justify-content-center ${GridList ? "grid" : "list"}`}>
     {products.map((product, i) => (
@@ -19,9 +23,9 @@ export const ProductCards = ({GridList, products}) => {
                     <a href="#">
                         <i className="icofont-heart"></i>
                     </a>
-                    <Link to="/cart-page"> 
-                        <i className="icofont-cart-alt"></i>
-                    </Link>
+                    <a  onClick={ () => dispatch(addItems(product))}>
+                      <i className="icofont-cart-alt"></i>
+                  </a>
                 </div>
             </div>
             <div className="product-content">
@@ -46,9 +50,9 @@ export const ProductCards = ({GridList, products}) => {
                 <a href="#">
                     <i className="icofont-heart"></i>
                 </a>
-                <a href="#">
+                <span onClick={ () => dispatch(addItems(product))}>
                     <i className="icofont-cart-alt"></i>
-                </a>
+                </span>
             </div>
           </div>
           <div className="product-content">

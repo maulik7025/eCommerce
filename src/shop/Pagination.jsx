@@ -28,7 +28,7 @@ const Pagination = ({totalProduct, perPageProduct, setCureentPage, currentPage})
 
         {
                pageNumber.map((number, i) => (
-                <li className={`page-item ${number === currentPage ? "bg-warning" : ""}`}>
+                <li key={i} className={`page-item ${number === currentPage ? "bg-warning" : ""}`}>
                     <button className='bg-transparent' onClick={() => paginate(number)}>{number}</button>
                 </li>
                ))

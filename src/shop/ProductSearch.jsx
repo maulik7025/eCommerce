@@ -11,7 +11,7 @@ const ProductSearch = ({products}) => {
   return (
     <div className='widget widget-search'>
         <form className='search-wrapper mb-3'>
-            <input type='text' name='search' placeholder='Search...' defaultValue={searchItems} id='search' 
+            <input type='text' name='search' placeholder='Search...' value={searchItems} id='search' 
             onChange={(e) => setSearchItems(e.target.value)}/>
             <button type="submit">
                 <i className='icofont-search-2'></i>

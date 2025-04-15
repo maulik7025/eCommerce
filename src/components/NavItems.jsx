@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import logo from '/images/logo/logo.png';
+import { useSelector } from 'react-redux';
 
 const NavItems = () => {
     // const [] = useState(false);
@@ -16,6 +17,10 @@ const NavItems = () => {
             setAddSticky(false)
         }
     });
+
+    const cartItems = useSelector((store) => store.cart.cartItems);
+
+    console.log(cartItems)
 
   return (
     <header className={`header-section style-4 ${addSticky ? "header-fixed" : ""}`}>
@@ -49,13 +54,14 @@ const NavItems = () => {
                                 <li><Link to="/blog">Blog</Link></li>
                                 <li><Link to="/about">About</Link></li>
                                 <li><Link to="/contact">Contact us</Link></li>
+                                <li><Link to="/ShopCart">Cart ({cartItems.length})</Link></li>
                             </ul>                           
                         </div>
                         <Link to="/signup" className='lab-btn me-3 d-none d-md-block'>Create Account</Link>
                         <Link to="/login" className='d-none-d-md-block'>Login</Link>
 
                         {/* menu toggle */}
-                        <div onClick={()=>setMenuToggle(!menuToggle)} className={`header-bar d-lg-none ${menuToggle? "active" : ""}`}>
+                        <div onClick={()=>setMenuToggle(!menuToggle)} className={`header-bar d-lg-none ${menuToggle ? "active" : ""}`}>
                             <span></span>
                             <span></span>
                             <span></span>
@@ -71,7 +77,7 @@ const NavItems = () => {
             </div>
         </div>
 
-    </header>
+    </header>   
   )
 }
 

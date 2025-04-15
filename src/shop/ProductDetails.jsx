@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { addItem } from '../../../Product-Filter/src/utils/cartSlice';
 
 const ProductDetails = ({item}) => {
 
-    
+    const dispatch = useDispatch();
+
+
     const {name, id, price, seller, quantity, ratingsCount, img} = item;
 
     const [preQuantity, setPreQuantity] = useState(quantity)
@@ -62,6 +66,9 @@ const ProductDetails = ({item}) => {
     setColor("Select Color")
     }
   return (
+
+    
+    
         <div>
             <h4>{name}</h4>
             <p className='rating'>
@@ -114,7 +121,7 @@ const ProductDetails = ({item}) => {
                         onChange={(e) => setCoupon(e.target.value)} />
                     </div>
 
-                    <button type='submit' className='lab-btn'>
+                    <button type='submit' className='lab-btn' onClick={() => dispatch(addItem(items))}>
                         <span>Add To Cart</span>
                     </button>
                     <Link to="/cart-page" className='lab-btn bg-primary'>

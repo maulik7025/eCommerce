@@ -73,7 +73,27 @@
     -moz-appearance: none;
     padding-right: 30px;
 }
+ a {
+    cursor: pointer;
+}
+.cart-plus-minus .btn {
+    background-color: #fd7e14;
+    width: 35px;
+    height: 35px;
+    border-radius: 0;
+    margin: 5px;
+    color: #fff;
+}
+.cart-plus-minus .btn:hover {
+    background-color: #000;
+    color: #fff;
+}
 
+.cart-plus-minus {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
 @media (max-width: 991px) {
     .header-section.style-4 .header-top {
         background-color: #fff;

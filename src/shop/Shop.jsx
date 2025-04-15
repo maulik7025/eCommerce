@@ -49,7 +49,10 @@ export const Shop = () => {
                     <div className='col-lg-8 col-12'>
                         <article>
                             <div className='shop-title d-flex flex-warp justify-content-between'>
-                                <p>{showResult}</p>
+                                <p>Showing {indexOfFirstProduct+1} - 
+                                    {
+                                      indexOfLastProduct > totalProduct ?  totalProduct : indexOfLastProduct
+                                    } &nbsp; of {totalProduct} Results</p>
                                 <div className={`product-view-mode ${GridList ? "gridActive" : "listActive"}`}>
                                     <a className='grid' onClick={() => setGridList(!GridList)}>
                                         <i className='icofont-ghost'></i>

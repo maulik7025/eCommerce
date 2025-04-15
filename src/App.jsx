@@ -4,17 +4,19 @@ import { Outlet } from 'react-router-dom'
 import './App.css'
 import NavItems from './components/NavItems'
 import Footer from './components/Footer'
+import { Provider } from 'react-redux'
+import store from './utilis/appStore'
 
 function App() {
 
   return (
-    <>
-      <NavItems/>
-      <div className='min-vh-100'>
-        <Outlet/>
-      </div>
-      <Footer/>
-    </>
+    <Provider store={store}>
+        <NavItems/>
+        <main className='min-vh-100'>
+          <Outlet/>
+        </main>
+        <Footer/>
+    </Provider>
   )
 }
 
