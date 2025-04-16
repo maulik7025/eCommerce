@@ -39,12 +39,12 @@ const shopCart = () => {
                       <tr key={item.id}>
                         <td className="product-item cat-product">
                           <div className="p-thumb">
-                            <Link to="/shop-single">
+                            <Link to={`/shop/${item.id}`}>
                               <img src={item.img} alt="" />
                             </Link>
                           </div>
                           <div className="p-content">
-                            <Link to="/shop-single">{item.name}</Link>
+                            <Link to={`/shop/${item.id}`}>{item.name}</Link>
                           </div>
                         </td>
                         <td className="cat-price">${item.price}</td>

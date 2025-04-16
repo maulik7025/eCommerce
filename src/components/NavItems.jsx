@@ -20,7 +20,7 @@ const NavItems = () => {
 
     const cartItems = useSelector((store) => store.cart.cartItems);
 
-    console.log(cartItems)
+    // console.log(cartItems)
 
   return (
     <header className={`header-section style-4 ${addSticky ? "header-fixed" : ""}`}>
